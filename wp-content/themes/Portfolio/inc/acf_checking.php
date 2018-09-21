@@ -18,9 +18,18 @@ function get_field_acf($name){
     endif;
 }
 
-function is_field_empty($name){
+function is_field_not_empty($name){
     if( !empty(get_field_acf($name)) ){
         return true;
     }
     return false;
+}
+
+function count_experience($start, $end){
+    $datetime1 = new DateTime("$start");
+    $datetime2 = new DateTime("$end");
+
+    $difference = $datetime1->diff($datetime2);
+
+    return '<i>'.$difference->y.' years '.$difference->m.' months </i>';
 }

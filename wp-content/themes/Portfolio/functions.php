@@ -26,3 +26,8 @@ require_once 'inc/add_custom_style_class.php';
 
 require_once 'inc/acf_checking.php';
 
+/*
+    Helper functions
+*/
+
+require_once 'inc/helper_functions.php';
